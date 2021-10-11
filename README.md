@@ -7,9 +7,9 @@ Meine Repository basiert vorwiegend auf die Tutorioals von [Sebastian Philippi](
   - [Entity Relationship Modell](#Entity-Relationship-Modell)
 - **Relationales Modell**
   - [Relationen](#Relationen) 
-  - [1. Noromalform)](#1-Noromalform)
-  - [2. Noromalform](#2-Noromalform)
-  - [3. Noromalform](#3-Noromalform)
+  - [1. Normalform)](#1-Normalform)
+  - [2. Normalform](#2-Normalform)
+  - [3. Normalform](#3-Normalform)
 - **SQL**
   - [1. Tabellen erstellen](#1-Tabellen-erstellen)
   - [2. Referentielle Integrität](#2-referentielle-Integrität)
@@ -23,7 +23,7 @@ Schauen wir uns die folgene Anferdorung an:
 
 <img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/Domaenenanalyse.png" >
 
-In dem Text die rot gefärbten Nomen stehen für Entitäten, die blau gefärbten Nomen für Attribute und die grün gefärbten für Relationen zwischen diesen Entitäten. Die unterstrichene Wörter sagen in welcher Beziehung die Entitäten zueinander stehen. z.B. Jahrgang eines Weines darf auch NULL sein.
+In dem Text die rot gefärbten Nomen stehen für Entitäten, die blau gefärbten Nomen für Attribute und die grün gefärbten für Relationen zwischen diesen Entitäten. Die unterstrichene Wörter sagen in welcher Beziehung die Entitäten zueinander stehen. Z.B. ein Kunde darf aus dem europäischen Ausland sein.
 
 ## Entity Relationship Modell
 
@@ -35,19 +35,25 @@ In dem Text die rot gefärbten Nomen stehen für Entitäten, die blau gefärbten
 Unser ERM ist zwar fertig, dennoch ist es natürlich nicht aussreichend für eine Datenbank. Folgendes relationales Modell zeigt mehr Klarheit:
 <img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/RM.png" >
 
-## 1. Noromalform
-Es ist zu sehen, dass die Tabelle des Kunden entspricht nicht der 1. Normalform. Damit sie der 1. Normalform enstpricht, muss sie so sein:
+## 1. Normalform
+Für die 1. Normalform muss jedes Attribut in einer Relation einen automaren Wertebereich haben. Mit anderen Worten: in jeder Zeile einer Tabelle steht nur ein Wert.
+
+Bei unserer Tabelle Kunde in der Spalte Adresse werden Strasse, Hausnummer etc. alles zusammen stehen und mit Komata getrennt. Das entspricht nicht der 1. Normalform. Damit sie der 1. Normalform enstpricht, muss sie so sein:
 
 <img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/ErsteNormalform.png" >
 
-## 2. Noromalform
-Da ein Artikel mehrfach in mehrere Aufträgen und in einem Auftrag mehrere Artikel vorkommen können, muss man da ein Primärschlüssel aus zwei Attributen nehmen. Dennoch hat z.B. das Datum mit der Artikelnummer nichts zu tun. Also, die Tabelle entspricht nicht der 2. Normalform. So würde sie der 2. Normalform entsprechen:
+## 2. Normalform
+Für die 2. Normalform muss eine Tabelle zunächst ein mal in der 1. Normalform sein und alle Nicht-Schlüsselattribute müssen vom gesagmten Primärschlüssel abhängig sein. Mit anderen Worten: Jede Relation der Datenbank bildet nur einen Sachverhalt ab!
+
+Da ein Artikel mehrfach in mehrere Aufträgen und in einem Auftrag mehrere Artikel vorkommen können, muss man da ein Primärschlüssel aus zwei Attributen nehmen. Dennoch hat z.B. das Datum mit der Artikelnummer nichts zu tun. Also, es ist nicht vom gesagmten Primärschlüssel abhängig, nur von einem Tel dessen. Ergo, die Tabelle entspricht nicht der 2. Normalform. So würde sie der 2. Normalform entsprechen:
 
 <img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/ZweiteNormalform.png" >
 
 
-## 3. Noromalform
-Aus der PLZ kann man die Stadt herleiten und aus der Stadt heraus kann man das Land bestimmen. Deswegen entsprich die Tabelle auch der 3. Normalform nicht.
+## 3. Normalform
+Für die 3. Normalform sind alle Datenfelder nur vom Primärschlüssel und nicht voneinander abhängig sein. Also, ein Nicht-Schlüsselattribut darf nicht aus dem anderen Nicht-Schlüsselattribut hervorgehen.
+
+Bei unserer Tabelle Kunde kann man aus der PLZ die Stadt herleiten und aus der Stadt heraus kann man das Land bestimmen. Deswegen entspricht die Tabelle der 3. Normalform nicht.
 So würde sie dann der 3. Normalform entsprechen:
 
 <img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/DritteNormalform.png" >
