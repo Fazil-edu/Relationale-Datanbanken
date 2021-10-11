@@ -21,36 +21,36 @@ Meine Repository basiert vorwiegend auf die Tutorioals von [Sebastian Philippi](
 
 Schauen wir uns die folgene Anferdorung an:
 
-<img src="https://github.com/Fazil-edu/sil/blob/main/Bilder/Domaenenanalyse.png" >
+<img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/Domaenenanalyse.png" >
 
 In dem Text die rot gefärbten Nomen stehen für Entitäten, die blau gefärbten Nomen für Attribute und die grün gefärbten für Relationen zwischen diesen Entitäten. Die unterstrichene Wörter sagen in welcher Beziehung die Entitäten zueinander stehen. z.B. Jahrgang eines Weines darf auch NULL sein.
 
 ## Entity Relationship Modell
 
-<img src="https://github.com/Fazil-edu/sil/blob/main/Bilder/ERM.png" >
+<img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/ERM.png" >
 
 # Relationales Modell
 
 ## Relationen
 Unser ERM ist zwar fertig, dennoch ist es natürlich nicht aussreichend für eine Datenbank. Folgendes relationales Modell zeigt mehr Klarheit:
-<img src="https://github.com/Fazil-edu/sil/blob/main/Bilder/RM.png" >
+<img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/RM.png" >
 
 ## 1. Noromalform
 Es ist zu sehen, dass die Tabelle des Kunden entspricht nicht der 1. Normalform. Damit sie der 1. Normalform enstpricht, muss sie so sein:
 
-<img src="https://github.com/Fazil-edu/sil/blob/main/Bilder/ErsteNormalform.png" >
+<img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/ErsteNormalform.png" >
 
 ## 2. Noromalform
 Da ein Artikel mehrfach in mehrere Aufträgen und in einem Auftrag mehrere Artikel vorkommen können, muss man da ein Primärschlüssel aus zwei Attributen nehmen. Dennoch hat z.B. das Datum mit der Artikelnummer nichts zu tun. Also, die Tabelle entspricht nicht der 2. Normalform. So würde sie der 2. Normalform entsprechen:
 
-<img src="https://github.com/Fazil-edu/sil/blob/main/Bilder/ZweiteNormalform.png" >
+<img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/ZweiteNormalform.png" >
 
 
 ## 3. Noromalform
 Aus der PLZ kann man die Stadt herleiten und aus der Stadt heraus kann man das Land bestimmen. Deswegen entsprich die Tabelle auch der 3. Normalform nicht.
 So würde sie dann der 3. Normalform entsprechen:
 
-<img src="https://github.com/Fazil-edu/sil/blob/main/Bilder/DritteNormalform.png" >
+<img src="https://github.com/Fazil-edu/Relationale-Datanbanken/blob/main/Bilder/DritteNormalform.png" >
 
 
 # SQL
