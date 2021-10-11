@@ -7,7 +7,7 @@ Meine Repository basiert vorwiegend auf die Tutorioals von [Sebastian Philippi](
   - [Entity Relationship Modell](#Entity-Relationship-Modell)
 - **Relationales Modell**
   - [Relationen](#Relationen) 
-  - [1. Normalform)](#1-Normalform)
+  - [1. Normalform](#1-Normalform)
   - [2. Normalform](#2-Normalform)
   - [3. Normalform](#3-Normalform)
 - **SQL**
